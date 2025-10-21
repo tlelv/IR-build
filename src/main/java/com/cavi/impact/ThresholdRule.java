@@ -1,0 +1,18 @@
+
+package com.cavi.impact;
+
+import java.time.Duration;
+
+public class ThresholdRule {
+    public enum Op { GREATER, LESS, GE, LE, EQUAL }
+    private final Op op;
+    private final double threshold;
+    private final Duration window; // null or zero for pointwise
+
+    public ThresholdRule(Op op, double threshold, Duration window) {
+        this.op = op; this.threshold = threshold; this.window = window;
+    }
+    public Op getOp() { return op; }
+    public double getThreshold() { return threshold; }
+    public Duration getWindow() { return window; }
+}
