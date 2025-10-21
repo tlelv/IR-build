@@ -1,5 +1,5 @@
 
-package com.cavi.impact;
+package com.cavi.modules.impact;
 
 import javax.swing.table.AbstractTableModel;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ public class ResultsTableModel extends AbstractTableModel {
     private final List<FilterResult.Match> rows = new ArrayList<>();
     private static final String[] COLS = {"Time", "Value", "Note"};
 
-    public void setResults(List<FilterResult.Match> matches) {
+    public void setResults(java.util.List<FilterResult.Match> matches) {
         rows.clear();
         rows.addAll(matches);
         fireTableDataChanged();

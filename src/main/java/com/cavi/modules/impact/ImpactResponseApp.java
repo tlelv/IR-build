@@ -1,11 +1,8 @@
 
-package com.cavi.impact;
+package com.cavi.modules.impact;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
-import java.util.Scanner;
 
 public class ImpactResponseApp {
     public static void main(String[] args) {
@@ -33,7 +30,7 @@ public class ImpactResponseApp {
         sb.append("1) Load a CSV (timestamp,value).\n");
         sb.append("2) Edit a threshold rule (operator, threshold, window).\n");
         sb.append("3) Run to see matches.\n\n");
-        sb.append("A sample CSV is included in the JAR at /sample.csv.\n");
+        sb.append("Use scripts/run.sh or scripts/run.ps1 to start without Gradle.\n");
         ta.setText(sb.toString());
         JPanel p = new JPanel(new BorderLayout());
         p.add(new JScrollPane(ta), BorderLayout.CENTER);

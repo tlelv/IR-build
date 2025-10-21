@@ -1,5 +1,5 @@
 
-package com.cavi.impact;
+package com.cavi.modules.impact;
 
 import java.time.Duration;
 import java.time.ZonedDateTime;

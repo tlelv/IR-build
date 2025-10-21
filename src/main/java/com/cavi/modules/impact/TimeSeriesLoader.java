@@ -1,5 +1,5 @@
 
-package com.cavi.impact;
+package com.cavi.modules.impact;
 
 import java.io.BufferedReader;
 import java.io.File;

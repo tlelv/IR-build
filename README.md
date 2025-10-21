@@ -1,26 +1,40 @@
 
-# Impact Response (Standalone)
+# Impact Response (Standalone; CAVI-aligned)
 
-A minimal standalone Swing app that lets you:
-- Load time series data from CSV (timestamp,value).
-- Define threshold rules (>, <, >=, <=, ==), optionally sliding window average.
-- Run filters and see matches as a table.
-- Intended for integration into CAVI setup tab later (panel is `ImpactResponsePanel`).
+This repo is a clean, runnable Swing app implementing an Impact Response feature.
+It is packaged under `com.cavi.modules.impact` to make future integration into CAVI straightforward.
 
-## Build
+## Run (no Gradle required)
+
+### macOS/Linux
 ```bash
-./gradlew shadowJar
+./scripts/run.sh
 ```
 
-## Run
+### Windows (PowerShell)
+```powershell
+scripts\run.ps1
+```
+
+The scripts compile sources to `out/` and launch the app.
+
+## Build with Gradle (optional)
+
+If you have Gradle installed:
 ```bash
-java -jar build/libs/impact-response-all.jar
+gradle run
+gradle shadowJar
+```
+
+If you want a Gradle wrapper in this repo:
+```bash
+gradle wrapper
+# then use ./gradlew run
 ```
 
 ## CSV Format
-Must include a header row: `timestamp,value` and ISO-8601 timestamps.
 
-Example:
+`timestamp,value` header with ISO-8601 timestamps:
 ```
 timestamp,value
 2025-01-01T00:00:00Z,10

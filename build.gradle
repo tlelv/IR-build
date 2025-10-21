@@ -4,7 +4,7 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
 
-group = 'com.cavi'
+group = 'com.cavi.modules'
 version = '1.0.0'
 
 repositories {
@@ -12,12 +12,11 @@ repositories {
 }
 
 dependencies {
-    // No external dependencies for now (pure Swing)
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
 }
 
 application {
-    mainClass = 'com.cavi.impact.ImpactResponseApp'
+    mainClass = 'com.cavi.modules.impact.ImpactResponseApp'
 }
 
 tasks.named('test') {

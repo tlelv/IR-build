@@ -1,5 +1,5 @@
 
-package com.cavi.impact;
+package com.cavi.modules.impact;
 
 import javax.swing.*;
 import java.awt.*;
