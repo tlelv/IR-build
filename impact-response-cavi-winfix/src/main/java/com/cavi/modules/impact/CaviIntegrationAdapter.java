@@ -1,1 +1,0 @@
-package com.cavi.modules.impact; import javax.swing.*; public class CaviIntegrationAdapter{public interface SetupTabRegistry{void addTab(String name,JComponent component);} public static void register(SetupTabRegistry registry){registry.addTab("Impact Response",new ImpactResponsePanel());}}
